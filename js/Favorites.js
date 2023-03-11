@@ -103,8 +103,8 @@ export class FavoritesView extends Favorites {
       <div class="wrapper">
         <a href="#name"><h2>Would you like to register a Pokémon?</h2></a>
         <div class="back">
-        <img src="/assets/pokeballback.png" alt="Pokeball behind teacher Oak">
-        <img src="/assets/oak.png" alt="Teacher Oak">
+        <img src="./assets/pokeballback.png" alt="Pokeball behind teacher Oak">
+        <img src="./assets/oak.png" alt="Teacher Oak">
         </div>
       </div>
     </td>
@@ -125,7 +125,7 @@ export class FavoritesView extends Favorites {
     <td class="type">electric</td>
     <td class="ability">static</td>
     <td class="base_experience">112</td>
-    <td><button class="remove"><img src="/assets/pokeball.png" alt="Pokeball to remove your's Pokémon"></button></td>
+    <td><button class="remove"><img src="./assets/pokeball.png" alt="Pokeball to remove your's Pokémon"></button></td>
     `;
 
     return tr;
