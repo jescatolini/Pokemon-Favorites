@@ -24,7 +24,7 @@ header {
   margin-bottom: 4rem;
 }
 header img {
-  max-width: 130px;
+  max-width: 160px;
   filter: drop-shadow(.2rem .4rem .4rem rgba(0, 0, 0, 0.3));
 }
 .search input{
@@ -51,13 +51,14 @@ header img {
 }
 table {
   width: 100%;
+  overflow-x:hidden;
+  max-height: 400px;
   text-align: left;
   border-collapse: collapse;
   background-color: #F2F5C0;
   border-radius: 2rem;
   outline: 3px solid #2A6BAF;
   box-shadow: 0 0 .4rem .4rem rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
 th{
@@ -77,6 +78,7 @@ table th:last-child {
 table tr:nth-child(even) {
   background-color: #81B2D1;
   color: white;
+  border-bottom: 1px solid #2A6BAF;
 }
 td{
   padding: 2rem;
@@ -143,9 +145,28 @@ input::placeholder {
 
 a{
   text-decoration: none;
-  color: #030101
+  color: #030101;
 }
 
+.scroll{
+  border-radius: 2rem;
+  max-height: 768px;
+  overflow:auto;
+  padding: 0.5rem;
+}
+.scroll::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: transparent;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 2rem;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2rem;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
 
 label {
 	border: 0 !important;
