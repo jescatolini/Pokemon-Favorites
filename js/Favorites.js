@@ -1,7 +1,5 @@
 import { PokeApi } from "./PokeApi.js";
 
-// classe que vai conter a lógica dos dados
-// como os dados serão estruturados
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root);
@@ -50,7 +48,6 @@ export class Favorites {
   }
 }
 
-// classe que vai criar a visualização e eventos do HTML
 export class FavoritesView extends Favorites {
   constructor(root) {
     super(root);
@@ -73,16 +70,17 @@ export class FavoritesView extends Favorites {
   update() {
     this.removeAllTr();
 
-    this.entries.forEach((pokemon) => {
+    this.entries.forEach((pokemon) => { 
       this.tbody.querySelectorAll(".oak").forEach((div) => {
         div.remove();
       });
       const row = this.createRowPokemon();
 
-      row.querySelector(".pokemon img").src = pokemon.sprite;
       row.querySelector(".pokemon p").textContent = pokemon.name;
+      row.querySelector(".pokemon img").src = pokemon.sprite;
+      row.querySelector(".pokemon img").alt = `Pokémon ${pokemon.name}`;
       row.querySelector(".type").textContent = pokemon.type;
-      row.querySelector(".ability").textContent = pokemon.abilities;
+      row.querySelector(".ability").textContent = pokemon.ability;
       row.querySelector(".base_experience").textContent = pokemon.base_experience;
 
       row.querySelector(".remove").onclick = () => {

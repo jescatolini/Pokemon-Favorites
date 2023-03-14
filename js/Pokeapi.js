@@ -1,15 +1,15 @@
-export class PokeApi{
+export class PokeApi {
   static search(pokemon) {
-    const finalpoint = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    const endpoint = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
-    return fetch(finalpoint)
-    .then(data => data.json()).
-    then(data => ({
-      abilities: data.abilities[0].ability.name,
-      base_experience: data.base_experience,
+    return fetch(endpoint)
+    .then(data => data.json())
+    .then(data => ({
       name: data.name,
       sprite: data.sprites.other.home.front_default,
-      type: data.types[0].type.name
+      type: data.types[0].type.name,
+      ability: data.abilities[0].ability.name,
+      base_experience: data.base_experience
     }))
   }
 }
