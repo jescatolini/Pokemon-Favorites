@@ -149,7 +149,7 @@ a{
 }
 
 .scroll{
-  border-radius: 2rem;
+  border-radius: 3rem;
   max-height: 768px;
   overflow:auto;
   padding: 0.5rem;
@@ -182,7 +182,7 @@ label {
 	white-space: nowrap !important;            /* 3 */
 }
 video{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
