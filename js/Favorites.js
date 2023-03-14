@@ -20,13 +20,13 @@ export class Favorites {
       const pokeExists = this.entries.find((entry) => entry.name === pokemon);
 
       if (pokeExists) {
-        throw new Error("Pokémon já cadastrado");
+        throw new Error("Pokémon already registered!");
       }
 
       const poke = await PokeApi.search(pokemon);
 
       if (poke.name === undefined) {
-        throw new Error("Pokémon não encontrado!");
+        throw new Error("Pokemon not found!");
       }
 
       this.entries = [poke, ...this.entries];
@@ -84,7 +84,7 @@ export class FavoritesView extends Favorites {
       row.querySelector(".base_experience").textContent = pokemon.base_experience;
 
       row.querySelector(".remove").onclick = () => {
-        const isOk = confirm("Tem certeza que deseja deletar esse Pokémon?");
+        const isOk = confirm("Are you sure you want to delete this Pokémon?");
         if (isOk) {
           this.delete(pokemon);
         }
