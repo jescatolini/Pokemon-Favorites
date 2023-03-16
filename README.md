@@ -4,7 +4,7 @@
   <a href="https://www.linkedin.com/in/jhonata-escatolini/"><img src="https://img.shields.io/static/v1?label=made%20by&message=Escatolini&color=4B00A8&style=flat"></a>
 </p>
 
-<h1 align="center"> 🎵 Music Player 🎵 </h1>
+<h1 align="center"> ⭐ Pokémon Favorites ⭐ </h1>
 
 <h2 align="center">
 🔗
